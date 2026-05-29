@@ -29,6 +29,7 @@ public class InventoryController {
 
     @PostMapping("/release")
     public ServiceResult release(@RequestBody OrderRequest request) {
+        System.out.println("isledi2");
         reservations.put(request.orderId(), "RELEASED");
         return new ServiceResult("RELEASED", "Inventory released for order " + request.orderId());
     }
